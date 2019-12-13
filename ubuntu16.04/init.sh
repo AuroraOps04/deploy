@@ -22,3 +22,4 @@ if [$USER -eq root]; then
     pip3 install --upgrade pip
 else 
     echo "请使用root用户再使用本脚本"
+fi

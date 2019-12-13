@@ -10,9 +10,10 @@ if [ $USER -eq root ]; then
         echo "正在创建目录/opt/mypypi/packages"
     else
         mkdir -p /opt/mypypi/packages
-
+    fi
     htpasswd -sc /opt/mypypi/.htaccess taorui
     pypi-server -p 18080 -P /opt/mypypi/.htaccess /opt/mypypi/packages&
     echo "已经创建了pypi-server到127.0.0.1:18080并且放入了后台，目录是/opt/mypypi/packages"
 else
     echo "请使用root用户登录再使用本脚本"
+fi
